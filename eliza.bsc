@@ -2,15 +2,18 @@
 '           ELIZA/DOCTOR
 '           CREATED BY JOSEPH WEIZENBAUM
 '           VERSION BY JEFF SHRAGER
+'           THIS VERSION BY JEFF SHRAGER
+'           EDITIED AND MODIFIED FOR MITS 8K BASIC 4.0 BY STEVE NORTH
+'           CREATIVE COMPUTING PO BOX 789-M MORRISTOWN NJ 07960
 '           PORTED TO NEOBASIC AND ADDITIONAL DATA BY ERLEND NAGEL
 '
 '            -----INITIALIZATION-----
-DIM C$(74),I$(74),K$(74),F$(74),S$(74),R$(74),P$(74),Z$(74)
-DIM S(37),R(37),N(37)
 '           N1 is the number of KEYWORDS
 '           N2 is the number of CONJUGATIONS
 '           N3 is the number of REPLIES
 N1=37:N2=12:N3=115
+DIM C$(74),I$(74),K$(74),F$(74),S$(74),R$(74),P$(74),Z$(74)
+DIM S(N1),R(N1),N(N1)
 '           Skip to logic DATA
 FOR X=1 TO N1+N2+N3
     READ Z$
