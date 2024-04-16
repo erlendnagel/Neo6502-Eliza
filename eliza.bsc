@@ -117,14 +117,10 @@ PROC sanitize(ref A$)
     FOR X = 1 TO LEN(A$)
         ' remove apostrophes
         IF MID$(A$,X,1)="'"
-            A$=LEFT$(A$,X-1)+RIGHT$(A$,LEN(A$)-X) 
-        ELSE
-            ' convert to uppercase
-            IF (ASC(MID$(A$, X, 1)) >= 97) & (ASC(MID$(A$, X, 1)) <= 122)
-                A$ = LEFT$(A$, X -1)+CHR$(ASC(MID$(A$, X, 1)) - 32)+RIGHT$(A$,LEN(A$)-x)
-            ENDIF
+            A$=LEFT$(A$,X-1)+RIGHT$(A$,LEN(A$)-X)
         ENDIF
     NEXT
+    A$=upper$(A$)
 ENDPROC
 
 '
