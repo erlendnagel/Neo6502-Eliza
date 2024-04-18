@@ -1,3 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-*.bsc linguist-language=Neobasic
+*.bsc linguist-language=Basic
+*.bsc linguist-detectable
